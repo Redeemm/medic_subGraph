@@ -1,0 +1,264 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "Condition",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "Date",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "Location",
+            "type": "string"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct ChainMedics.MedicalRecord[]",
+        "name": "medicalRecords",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "MedicalRecordStored",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "DateOfBirth",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "BloodType",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "Allergies",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "ChronicConditions",
+            "type": "string[]"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct ChainMedics.PatientInfo",
+        "name": "patientInfo",
+        "type": "tuple"
+      }
+    ],
+    "name": "PatientInfoStored",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getMedicalHistory",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "Condition",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "Date",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "Location",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct ChainMedics.MedicalRecord[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPatientInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "DateOfBirth",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "BloodType",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "Allergies",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "ChronicConditions",
+            "type": "string[]"
+          }
+        ],
+        "internalType": "struct ChainMedics.PatientInfo",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "Condition",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "Date",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "Location",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct ChainMedics.MedicalRecord[]",
+        "name": "medicalRecords",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "storeMedicalHistory",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "DateOfBirth",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "BloodType",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "Allergies",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "ChronicConditions",
+            "type": "string[]"
+          }
+        ],
+        "internalType": "struct ChainMedics.PatientInfo",
+        "name": "patientInfoData",
+        "type": "tuple"
+      }
+    ],
+    "name": "storePatientInfo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

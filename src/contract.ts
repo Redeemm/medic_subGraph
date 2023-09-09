@@ -1,5 +1,6 @@
 import {
   MedicalRecordStored as MedicalRecordStoredEvent,
+  MedicalRecordStoredMedicalRecordsStruct,
   PatientInfoStored as PatientInfoStoredEvent
 } from "../generated/Contract/Contract"
 import { MedicalRecordStored, PatientInfoStored } from "../generated/schema"
@@ -11,7 +12,7 @@ export function handleMedicalRecordStored(
     event.transaction.hash.concatI32(event.logIndex.toI32())
   )
   entity.Contract_id = event.params.id
-  entity.medicalRecords = event.params.medicalRecords
+  // entity.medicalRecords = event.params.medicalRecords.map((value: MedicalRecordStoredMedicalRecordsStruct) => value.Condition)
 
   entity.blockNumber = event.block.number
   entity.blockTimestamp = event.block.timestamp
