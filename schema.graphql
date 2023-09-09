@@ -1,0 +1,21 @@
+type MedicalRecordStored @entity(immutable: true) {
+  id: Bytes!
+  Contract_id: BigInt! # uint256
+  medicalRecords: [Bytes!]! # tuple[]
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PatientInfoStored @entity(immutable: true) {
+  id: Bytes!
+  Contract_id: BigInt! # uint256
+  patientInfo_Name: String! # string
+  patientInfo_DateOfBirth: String! # string
+  patientInfo_BloodType: String! # string
+  patientInfo_Allergies: [String!]! # string[]
+  patientInfo_ChronicConditions: [String!]! # string[]
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
